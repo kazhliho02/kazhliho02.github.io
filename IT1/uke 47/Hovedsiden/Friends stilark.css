@@ -7,23 +7,19 @@ body, html {
   grid-template-columns: 10% 60% repeat(3,10%);
   align-items: center;
 }
-.bg-img {
-  /* The image used */
-  background-image: url("friends_opening_titles.jpg");
+img{
+width: 100%
+}
+{box-sizing: border-box}
 
-  min-height: 650px;
-  width: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  /* Needed to position the navbar */
-  position: relative;
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 5px;
+  margin-top: 10px;
 }
 
-/* Position the navbar container inside the image */
 .container2{
   position: absolute;
   margin: 20px;
@@ -39,6 +35,7 @@ body, html {
 
 /* Navbar links */
 .topnav a {
+
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -53,39 +50,12 @@ body, html {
   background-color: #ddd;
   color: black;
 }
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.sticky + .content {
-  padding-top: 60px;
-}
 
-.space {
-  height: auto;
-  margin: auto;
-  color: white;
-}
 
-main{
-  display: grid;
-  grid-template-columns:6fr 6fr 6fr;
-  align-items: center;
-  grid-gap: 5px;
-  margin-top: 10px;
-}
 .character{
   grid-column: span 1;
   grid-row:span 1;
-
 }
-
-img{
-width: 100%
-}
-{box-sizing: border-box}
-
 /* Container needed to position the overlay. Adjust the width as needed */
 .container {
   position: relative;
@@ -93,14 +63,12 @@ width: 100%
   max-width: 300px;
   margin: auto;
 }
-
 /* Make the image to responsive */
 .image {
   display: block;
   width: 100%;
   height: auto;
 }
-
 /* The overlay effect - lays on top of the container and over the image */
 .overlay {
   position: absolute;
@@ -116,7 +84,6 @@ width: 100%
   padding: 20px;
   text-align: center;
 }
-
 /* When you mouse over the container, fade in the overlay title */
 .container:hover .overlay {
   opacity: 1;
