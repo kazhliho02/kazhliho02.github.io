@@ -1,0 +1,100 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+h2{
+  text-align: center;
+}
+}header{
+  display: grid;
+  grid-template-columns: repeat(3,10%);
+}
+img{
+  width: 50%;
+}
+
+.left{
+  display: block;
+    margin-left: auto;
+    width: 40%;
+}
+/* Position the navbar container inside the image */
+.container2{
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+.hoved{
+  display: grid;
+  grid-template-columns:40% 60%;
+  column-gap: 1px;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 50%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 60px 10px;
+    height: 100%;
+}
+.hoved{
+  display: grid;
+  grid-template-columns:30% 70% ;
+  column-gap: 3px;
+}
+
+
+
+#Rachel{background-color: rgb(145, 145, 145);}
+#Ross {background-color: rgb(145, 145, 145);}
+#Monica {background-color: rgb(145, 145, 145);}
+#Chandler {background-color: rgb(145, 145, 145);}
+#Phoebe {background-color: rgb(145, 145, 145);}
+#Joey {background-color: rgb(145, 145, 145);}
