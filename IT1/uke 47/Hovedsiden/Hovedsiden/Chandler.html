@@ -13,23 +13,35 @@
           <a href="Friends.html">Home</a>
           <a href="Fantherories.html">Fan therories</a>
           <a href="Which character are you.html">Which character are you?</a>
-          <a href="Characthers.html">Charcaters</a>
+          <div class="dropdown">
+            <button class="dropbtn">Charcaters
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="Rachel.html">Rachel Green</a>
+              <a href="Pheobe.html">Phoebe Buffay</a>
+              <a href="Monica.html">Monica Geller </a>
+              <a href="Joey.html">Joey Tribbianiany</a>
+              <a href="Ross.html">Ross Geller</a>
+              <a href="Chandler.html">Chandler Bing</a>
+            </div>
+          </div>
           <input type="text" placeholder="Search..">
         </div>
     </header>
 
     <main>
       <button class="tablink" onclick="openPage('Rachel', this, 'rgb(145, 145, 145)')">Rachel</button>
-      <button class="tablink" onclick="openPage('Ross', this, 'rgb(145, 145, 145)')"id="defaultOpen">Ross</button>
+      <button class="tablink" onclick="openPage('Ross', this, 'rgb(145, 145, 145)')">Ross</button>
       <button class="tablink" onclick="openPage('Monica', this, 'rgb(145, 145, 145)')">Monica</button>
-      <button class="tablink" onclick="openPage('Chandler', this, 'rgb(145, 145, 145)')">Chandler</button>
+      <button class="tablink" onclick="openPage('Chandler', this, 'rgb(145, 145, 145)')"id="defaultOpen">Chandler</button>
       <button class="tablink" onclick="openPage('Phoebe', this, 'rgb(145, 145, 145)')">Phoebe</button>
       <button class="tablink" onclick="openPage('Joey', this, 'rgb(145, 145, 145)')">Joey</button>
 
       <div id="Rachel" class="tabcontent">
         <h2>Rachel</h2>
         <div class="hoved">
-          <div class="hb1">  <img src="Rachel.jpg" alt="Rachel">
+          <div class="hb1">  <img src="RachelC.jpg" alt="Rachel">
            <table border="1" style="text-align:left;" >
              <thead>
                <tr>
@@ -72,7 +84,7 @@
       <div id="Ross" class="tabcontent">
           <h2> Ross</h2>
           <div class="hoved">
-            <div class="hb1">  <img src="Ross.jpg" alt="Ross">
+            <div class="hb1">  <img src="RossC.jpg" alt="Ross">
              <table border="1" style="text-align:left;" >
                <thead>
                  <tr>
@@ -115,7 +127,7 @@
       <div id="Monica" class="tabcontent">
         <h2>Monica</h2>
         <div class="hoved">
-          <div class="hb1">  <img src="Monica.jpg" alt="Monica">
+          <div class="hb1">  <img src="MonicaC.jpg" alt="Monica">
            <table border="1" style="text-align:left;" >
              <thead>
                <tr>
@@ -157,7 +169,7 @@
       <div id="Phoebe" class="tabcontent">
         <h2>Phoebe</h2>
         <div class="hoved">
-          <div class="hb1">  <img src="Phoebe.jpg" alt="Phoebe">
+          <div class="hb1">  <img src="PhoebeC.jpg" alt="Phoebe">
            <table border="1" style="text-align:left;" >
              <thead>
                <tr>
@@ -200,7 +212,7 @@
         <div id="Chandler" class="tabcontent">
           <h2>Chandler</h2>
           <div class="hoved">
-            <div class="hb1">  <img src="chandle.jpg" alt="Chandler">
+            <div class="hb1">  <img src="chandleC.jpg" alt="Chandler">
              <table border="1" style="text-align:left;" >
                <thead>
                  <tr>
@@ -243,7 +255,7 @@
           <div id="Joey" class="tabcontent">
             <h2>Joey</h2>
             <div class="hoved">
-              <div class="hb1">  <img src="Joey.jpg" alt="Joey">
+              <div class="hb1">  <img src="JoeyC.jpg" alt="Joey">
                <table border="1" style="text-align:left;" >
                  <thead>
                    <tr>

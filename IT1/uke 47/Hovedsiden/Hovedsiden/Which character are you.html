@@ -7,27 +7,37 @@
   </head>
   <body>
     <header>
-      <h2>FriendsFanpage</h2>
+      <h1>FriendsFanpage</h1>
       <div class="topnav">
         <a href="Friends.html">Home</a>
         <a href="Fantherories.html">Fan therories</a>
         <a href="Which character are you.html">Which character are you?</a>
-        <a href="Characthers.html">Charcaters</a>
-        <input type="text" placeholder="Search..">
+        <div class="dropdown">
+          <button class="dropbtn">Charcaters
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="Rachel.html">Rachel Green</a>
+            <a href="Pheobe.html">Phoebe Buffay</a>
+            <a href="Monica.html">Monica Geller </a>
+            <a href="Joey.html">Joey Tribbianiany</a>
+            <a href="Ross.html">Ross Geller</a>
+            <a href="Chandler.html">Chandler Bing</a>
+          </div>
+        </div>
+        <input type="text" placeholder="Search.." id="search">
       </div>
     </header>
 
-    <h1>Which character are you from Friends?</h1>
+    <h2>Which character are you from Friends?</h2>
 
     <main>
       <div class="hoved"></div>
-      <form action="/action_page.php">
+      <form action="submit.html">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
+        <input class="textInp" id="fname" name="firstname" placeholder="Your name..">
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
+        <input class="textInp" id="lname" name="lastname" placeholder="Your last name..">
         <label for="country">Country</label>
         <select id="country" name="country">
           <option value="australia">Australia</option>
