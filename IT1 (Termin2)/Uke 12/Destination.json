@@ -1,0 +1,144 @@
+{
+  "destination":{
+    "Italy":{
+      "Continent":"Europe",
+      "Chapther":"Roma",
+      "Currency":"Euro",
+      "Bilde":""
+    },
+    "France":{
+      "Continent":"Europe",
+      "Chapther":"Paris",
+      "Currency":"Euro",
+      "Bilde":""
+    },
+    "Spain":{
+      "Continent":"Europe",
+      "Chapther":"Barcelona",
+      "Currency":"Euro",
+      "Bilde":""
+    },
+    "Greece":{
+      "Continent":"Europe",
+      "Chapther":"Athens",
+      "Currency":"Euro",
+      "Bilde":""
+    },
+    "England":{
+      "Continent":"Europe",
+      "Chapther":"London",
+      "Currency":"Pound",
+      "Bilde":""
+    },
+    "Iceland":{
+      "Continent":"Europe",
+      "Chapther":"Reykjavík",
+      "Currency":"Euro",
+      "Bilde":""
+    },
+    "Germany":{
+      "Continent":"Europe",
+      "Chapther":"Reykjavík",
+      "Currency":"Euro",
+      "Bilde":""
+    },
+
+
+    "Russia":{
+      "Continent":"Asia",
+      "Chapther":"Moskva",
+      "Currency":"Russian ruble",
+      "Bilde":""
+    },
+    "China":{
+      "Continent":"Asia",
+      "Chapther":"Bejing",
+      "Currency":"Yuan",
+      "Bilde":""
+    },
+    "Japan":{
+      "Continent":"Asia",
+      "Chapther":"Tokyo",
+      "Currency":"Yen",
+      "Bilde":""
+    },
+    "India":{
+      "Continent":"Asia",
+      "Chapther":"New Delhi",
+      "Currency":"Indian rupee",
+      "Bilde":""
+    },
+    "Thailand":{
+      "Continent":"Asia",
+      "Chapther":"Bangkok",
+      "Currency":"Baht",
+      "Bilde":""
+    },
+
+
+    "New Zealand":{
+      "Continent":"Oceania",
+      "Chapther":"Wellingtion",
+      "Currency":"Dollar",
+      "Bilde":""
+    },
+    "Australia":{
+      "Continent":"Oceania",
+      "Chapther":"Canberra",
+      "Currency":"Dollar",
+      "Bilde":""
+    },
+    "Fiji":{
+      "Continent":"Oceania",
+      "Chapther":"Suva",
+      "Currency":"Dollar",
+      "Bilde":""
+    },
+
+
+    "United States of America":{
+      "Continent":"America",
+      "Chapther":"Washington.D.C",
+      "Currency":"Dollar",
+      "Bilde":""
+    },
+    "Canada":{
+      "Continent":"America",
+      "Chapther":"Toronto",
+      "Currency":"Dollar",
+      "Bilde":""
+    },
+    "Mexico":{
+      "Continent":"America",
+      "Chapther":"New Mexico",
+      "Currency":"Dollar",
+      "Bilde":""
+    },
+    "Brazil":{
+      "Continent":"America",
+      "Chapther":"Braziliana",
+      "Currency":"Dollar",
+      "Bilde":""
+    },
+
+
+    "South Africa":{
+      "Continent":"Africa",
+      "Chapther":"Cape town",
+      "Currency":"Rand",
+      "Bilde":""
+    },
+    "Egypt":{
+      "Continent":"Africa",
+      "Chapther":"Cairo",
+      "Currency":"Egypthan pound",
+      "Bilde":""
+    },
+    "Tanzania":{
+      "Continent":"Africa",
+      "Chapther":"Dodoma",
+      "Currency":"Dollar",
+      "Bilde":""
+    }
+  }
+}
