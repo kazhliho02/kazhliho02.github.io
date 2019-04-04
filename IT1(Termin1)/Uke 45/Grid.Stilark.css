@@ -1,0 +1,37 @@
+main{
+}
+#hoved{
+  display: grid;
+  grid-template-columns: repeat(18,1fr);
+  grid-gap: 5px;
+}
+#lantanider{
+  display: grid;
+  grid-template-columns: repeat(18,1fr);
+  grid-gap: 5px;
+  margin-top: 20px;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grunnstoff{
+  background-color: #eee;
+}
+.ikkemetaller{
+  background-color:rgb(218, 230, 208);
+}
+.metall{
+  background-color: rgb(138, 156, 210);
+}
+.col-span-16{
+  grid-column: span 16;#
+}
+.col-span-10{
+  grid-column: span 10;
+}
+.usynlig{
+  opacity: 0;
+}
+body{
+  background-color: rgb(19, 66, 113);
+}

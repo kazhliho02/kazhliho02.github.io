@@ -22,85 +22,80 @@
   <body>
     <header>
       <nav>
-        <a id="logo" href="#">FlyForYou</a>
+        <a id="logo" href="index2.html">FlyForYou</a>
         <nav>
           <ul>
             <li><a href="index2.html" id="current">Home</a></li>
             <li><a href="Book.html">Book</a></li>
-            <li><a href="Destination.html">Destinations</a></li>\
+            <li><a href="Destination.html">Destinations</a></li>
             <li><a href="Flight.html">Flights</a></li>
-            <li><a href="About us.html">About us</a></li>
           </ul>
         </nav>
       </nav>
     </header>
-
     <main>
-      <button type="button" name="button" onclick="visLandEuropa()">Europe</button>
-      <button type="button" name="button" onclick="visLandAsia()">Asia</button>
-      <button type="button" name="button" onclick="visLandAfrica()">Africa</button>
-      <button type="button" name="button" onclick="visLandAmerica()">America</button>
-      <button type="button" name="button" onclick="visLandOceania()">Oceanias</button>
-
-      <section id="secDestination">
+        <button type="button" name="button" onclick="visLandEurope()">Europe</button>
+        <button type="button" name="button" onclick="visLandAsia()">Asia</button>
+        <button type="button" name="button" onclick="visLandAfrica()">Africa</button>
+        <button type="button" name="button" onclick="visLandAmerica()">America</button>
+        <button type="button" name="button" onclick="visLandOceania()">Oceanias</button>
+        <section id="secDestination">
       </section>
     </main>
-
     <script type="text/javascript">
-    //Referanser til firebase-databasens
-    const secAlleDestination= document.querySelector("#secDestination")
+    // Referanser til HTML-elementer
+    const secAlleDestination = document.querySelector("#secDestination");
+    // Referanser til firebase-databasen
+    const db = firebase.database();
+    const destination = db.ref("destination");
+    visAlleDestination(); // Kjører funksjonen visAllePokemon i det nettsiden starter, funksjonen er definert under
 
-    const db= firebase.database();
-    const destination=db.ref("destination");
-
-    visAlleDestnination();//Kjører funskjonen visAlleDestnination.
-
-    function visAlleDestnination(){
-      secAlleDestination.innerHTML=``;
-      destination.on("child_added",genererHTML);
+    function visAlleDestination(){
+      secAlleDestination.innerHTML = ``; // Sletter innholdet i html-elementet secAlleDestination
+      destination.on("child_added",genererHTML); // Spørrefunksjon som henter alle pokemon fra databasen, og kjører funksjonen genererHTML på hver destination.
     }
-    function visLandEuropa(){
-      secAlleDestination.innerHTML``;
-      destination.orderByChild("Europe")
-      .on("child_added",genererHTML);
+    function visLandEurope(){
+      secAlleDestination.innerHTML = ``;
+      destination.orderByChild("Europe").on("child_added",genererHTML);
     }
     function visLandAsia(){
-      secAlleDestination.innerHTML``;
-      destination.orderByChild("Asia")
-      .on("child_added",genererHTML);
-    }
-    function visLandAmerica(){
-      secAlleDestination.innerHTML``;
-      destination.orderByChild("America")
-      .on("child_added",genererHTML);
-    }
-    function visLandOceania(){
-      secAlleDestination.innerHTML``;
-      destination.orderByChild("Oceania")
-      .on("child_added",genererHTML);
+      secAlleDestination.innerHTML = ``;
+      destination.orderByChild("Asia").on("child_added",genererHTML);
     }
     function visLandAfrica(){
-      secAlleDestination.innerHTML``;
-      destination.orderByChild("Africa")
-      .on("child_added",genererHTML);
+      secAlleDestination.innerHTML = ``;
+      destination.orderByChild("Africa").on("child_added",genererHTML);
     }
+    function visLandAmerica(){
+      secAlleDestination.innerHTML = ``;
+      destination.orderByChild("America").on("child_added",genererHTML);
+    }
+    function visLandOceania(){
+      secAlleDestination.innerHTML = ``;
+      destination.orderByChild("Oceania").on("child_added",genererHTML);
+    }
+
 
     function genererHTML(snapshot){
+      // Javascript-funksjon for å generere HTML for hver Pokemon
+      // Denne får dere på prøven
       let key = snapshot.key;
       let poke = snapshot.val();
-      console.log(poke);
-      secAlleDestination.innerHTML+=`
-      <section class="destination">
-        <h3>${key}:${des["destination"]}</h3>
-        <p>Europe: ${poke["Europe"]}</p>
-        <p>America: ${poke["America"]}</p>
-        <p>Africa: ${poke["Africa"]}</p>
-        <p>Asia: ${poke["Asia"]}</p>
-      </section>
+      secAllePokemon.innerHTML += `
+        <section class="destination">
+          <h3>${key}:${poke["Chapther"]}</h3>
+          <p>Europe: ${poke["Europe"]}</p>
+          <p>Africa: ${poke["Africa"]}</p>
+          <p>America: ${poke["America"]}</p>
+          <p>Asia: ${poke["Asia"]}</p>
+          <p>Oceania: ${poke["Oceania"]}</p>
+        </section>
       `
     }
-
     </script>
+
+
+
     <footer>
     </footer>
   </body>

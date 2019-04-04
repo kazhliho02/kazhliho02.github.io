@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nettbutikk</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCrBsAev7qm5jZOP0T8PUiSyjXiJgiJQ5Y",
+        authDomain: "kontaktliste-eede3.firebaseapp.com",
+        databaseURL: "https://kontaktliste-eede3.firebaseio.com",
+        projectId: "kontaktliste-eede3",
+        storageBucket: "kontaktliste-eede3.appspot.com",
+        messagingSenderId: "181444685063"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <link rel="stylesheet" href="pokeman.css">
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      const db=firebase.database();
+      const sko=db.ref("varer/sko");
+      const jakker=db.ref("varer/jakker");
+
+      function visVare(snapshot){
+        console.log(snapshot.val());
+      }
+      /*.on er en spørre funksjonen,v'*/
+      //sko.on("child_added",visVare);//
+      //for å sortere etter dyreste   sko.orderByChild("pris").limitToLast(2)
+      sko.orderByChild("pris")//soteringsfunksjonen som sorterer på pris
+      .limitToFirst(2)//soteringsfunkjsonen, som gir de to siste
+      .on("child_added",visVare);//spørrefunksjonen ,
+                                 //lytter etter nye oppføringene, og kan kjøre visVare på hver oppføringene
+    </script>
+  </body>
+</html>

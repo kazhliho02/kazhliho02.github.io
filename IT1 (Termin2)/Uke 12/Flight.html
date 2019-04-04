@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD9cvCCkfmIIH8yZxvcNPGWrL9Bq_Ih7Ao",
+    authDomain: "flyforyou-5a651.firebaseapp.com",
+    databaseURL: "https://flyforyou-5a651.firebaseio.com",
+    projectId: "flyforyou-5a651",
+    storageBucket: "flyforyou-5a651.appspot.com",
+    messagingSenderId: "716627781087"
+  };
+  firebase.initializeApp(config);
+</script>
+    <link rel="stylesheet" href="Flight.css">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a id="logo" href="#">FlyForYou</a>
+        <nav>
+          <ul>
+            <li><a href="index2.html" >Home</a></li>
+            <li><a href="Book.html">Book</a></li>
+            <li><a href="Destination.html">Destinations</a></li>
+            <li><a href="Flight.html"id="current">Flights</a></li>
+          </ul>
+        </nav>
+      </nav>
+    </header>
+    <main>
+      <table>
+        <button onclick="visAlleFbilett()">All</button>
+        <button onclick="visFbilettBilligst()">Cheapest</button>
+        <button onclick="visFbilettDyrest()">Expensive</button>
+        <button onclick="visFbilett1500()">Best value</button>
+      </table>
+      <section id="secAlleFbilett">
+        </section>
+    <main>
+
+    <script type="text/javascript">
+    //refrer til databsen//
+    const secAlleFbilett=document.querySelector("#secAlleFbilett")
+
+    const db=firebase.database();
+    const flight=db.ref("fly/flights");
+
+    visAlleFbilett();
+
+    function visAlleFbilett(){
+      visAlleFbilett.innerHTML = "";
+      flight.on("child_added",visFbilett);
+    }
+    function visFbilettAlfabetisk(){
+      visAlleFbilett.innerHTML = "";
+      flight.orderByChild("To")
+      .on("child_added", visFbilett);
+    }
+    function visFbilettBilligst(){
+      visAlleFbilett.innerHTML = "";
+      flight.orderByChild("Price")
+      .limitToLast(10)
+      .on("child_added", visFbilett);
+    }
+    function visFbilettDyrest(){
+      visAlleFbilett.innerHTML = "";
+      flight.orderByChild("Price")
+      .limitToFirst(10)
+      .on("child_added", visFbilett);
+    }
+    function visFbilett1500(){
+      visAlleFbilett.innerHTML = "";
+      flight.orderByChild("Price")
+      .startAt("0")
+      .endAt("1500")
+      .on("child_added", visFbilett);
+    }
+
+    function visFbilett(snapshot){
+      let key=snapshot.key;
+      let flight=snapshot.val();
+      secAlleFbilett.innerHTML+=`
+      <section class="flight{">
+      <tr>
+        <td><h3>${key}:${flight["To"]}</h3></td>
+        <td><p>Price: ${flight["Price"]}</p></td>
+        <td><p>Company: ${flight["Company"]}</p></td>
+        <td><p>Depature: ${flight["Depature"]}</p></td>
+        <td><p>Arrival: ${flight["Arrival"]}</p></td>
+     </tr>
+     </section>
+      `
+    }
+    </script>
+
+  </body>
+</html>

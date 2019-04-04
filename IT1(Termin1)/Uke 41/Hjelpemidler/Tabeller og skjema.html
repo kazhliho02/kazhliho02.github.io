@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tabeller og skjema</title>
+  </head>
+  <body>
+    <h1>Tabeller</h1>
+
+    <table border=1 style="text-align:left;"> <!-- Skriver hele tabellen i et table-element -->
+      <thead> <!-- Samler overskriftene i et thead-element -->
+        <tr> <!-- Lager en ny rad for overskriftene med tr-elementet -->
+          <th>Album</th> <!-- Lager overskrifter med th-elementer -->
+          <th>Artist</th>
+          <th>År</th>
+        </tr>
+      </thead>
+      <tbody> <!-- Samler alt innhold i tabellen i et tbody-element -->
+        <tr> <!-- Lager en ny rad -->
+          <td>Malibu</td> <!-- Legger inn innhold i kolonnene med td-elementer -->
+          <td>Anderson .Paak</td>
+          <td>2016</td>
+        </tr>
+        <tr> <!-- Lager en ny rad -->
+          <td>My Beatiful Dark Twisted Fantasy</td>
+          <td>Kanye West</td>
+          <td>2010</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1>Skjema</h1>
+
+    <form action="register.html">
+      <label><h2>Registrering til min konfirmasjon</h2></label>
+
+      <label for="inputNavn">Navn:</label>
+      <input id="inputNavn" type="text" name="navn" placeholder="Skriv inn ditt navn" required>
+
+      <label for="inputAlder">Alder:</label>
+      <input id="inputAlder" type="number" name="alder" placeholder="Skriv inn din alder" required>
+
+      <br>
+      <label>Hva ønsker du å spise?</label>
+      <br>
+      <input id="rbTaco" type="radio" name="rbMat" value="taco"><label for="rbTaco">Taco</label>
+      <input id="rbPizza" type="radio" name="rbMat" value="pizza"><label for="rbPizza">Pizza</label>
+      <input id="rbFisk" type="radio" name="rbMat" value="fisk"><label for="rbFisk">Fisk</label>
+
+      <br>
+
+      <button type="sumbit" name="registreingsKnapp">Send inn</button>
+
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,203 @@
+html {
+  font-family: "Oswald";
+  background-color: #fafafa;
+}
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #e3e3e8;
+  background-color: #e1e5ed;
+}
+#logo {
+  float: left;
+  font-size: 3em;
+  margin: 0;
+  padding: .4em;
+  text-decoration: none;
+  color: #333;
+  border-right: 1px solid #e3e3e8;
+  transition: .5s all;
+}
+#logo:hover {
+  color: #fafafa;
+  background-color: #333;
+}
+nav {
+  float: left;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 2.2em 2em;
+}
+nav ul li {
+  display: inline;
+  padding: 0 .4em;
+}
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  padding-bottom: 1.3em;
+  transition: .5s color;
+}
+nav ul li a:hover {
+  border-bottom: 3px solid #333;
+}
+#current {
+  color: #ff4629;
+  border-bottom: 3px solid #333;
+}
+
+
+
+
+
+
+/*Om Fly for You about us del*/
+/*Innehold av tekst*/
+.col-text {
+  height:20em;
+  background-color: rgb(51, 52, 56);
+  color: white;
+}
+.grid-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  margin: 10px;
+}
+.col {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.col-left {
+  -webkit-box-ordinal-group:-1;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+}
+.col-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Aligner-item {
+  width: 60%;
+}
+.col-image {
+  background-size: cover;
+  background-position:center center;
+}
+
+@media (max-width: 640px) {
+  .grid-flex {
+    height: 40em;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+   }
+  .col {
+    order:vertical;
+  }
+  .col-left {
+    -webkit-box-ordinal-group:0;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+  }
+  .col-text div p {
+    padding: 1em;
+  }
+  .Aligner-item {
+    width: 90%;
+  }
+}
+
+.hoved{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 10px;
+  margin-left: 1px;
+  margin-right: 20px;
+	margin-top: 100px;
+  background-color: vec3(0.84, 0.84, 0.84);
+  margin-bottom: 100px
+}
+
+#Flerebilder{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+	margin-top:20px;
+}
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+  background-color: white;
+
+}
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.ContainerBtn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ContainerBtn:hover {
+  background-color: #555;
+}
+footer{
+ border-bottom: 2px solid white;
+background-color: #475068;
+font-family: "Oswald";
+color: white;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}

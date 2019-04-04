@@ -1,0 +1,29 @@
+body{
+  background-color: lightblue;
+}
+
+img{
+  padding-left: 200px;
+  padding-right: 200px;
+  width: 400px;
+}
+
+video{
+  padding-left: 200px;
+  padding-right: 200px;
+  width: 400px;
+}
+
+p{
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+li a{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}

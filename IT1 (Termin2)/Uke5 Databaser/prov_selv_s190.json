@@ -1,0 +1,67 @@
+{
+  "1":{
+    "svar":"En primærnøkkel er en unik nøkkel i hvert objekt til databasen"
+  },
+  "2":{
+    "a":{
+      "svar":"For elever på en skole kan primærnøkkelen være elevnummer eller feideID"
+    },
+    "b":{
+      "svar":"For fritidsbåter kan primærnøkkelen være serie nummer eller id-nummer."
+    },
+    "c":{
+      "svar":"For plantene kan primærnøkkelen være rase og navn"
+    },
+    "d":{
+      "svar":"På kontaktene dine kan primærnøkkelen være fullt navn og mobilnummer"
+    },
+    "e":{
+      "svar":"For stjernene kan primærnøkkelen være den matimatiske bregningen av posijonene av stjernene eller navnene på stjernene"
+    }
+  },
+  "3":{
+    "svar":"Kandidatnøkkelne er alternativene for en primærnøkkel"
+  },
+  "4":{
+    "svar":"Fremmednøkkler er en nøkkel som kobler sammen andre objekter eller databser"
+  },
+  "5":{
+    "svar":"Normalisering er teknikker som brukes for å unngå dobbeltlagring"
+  },
+  "6":{
+    "oppgave":"Lag et objekt med data om brukere av et dataspill",
+    "svar":{
+      "brukere":{
+        "thorcc":{
+          "passord":"passord123",
+          "highScore":5000
+        },
+        "jarle123":{
+          "passord":"hayri6247",
+          "highScore":1337
+        },
+        "charlote894":{
+          "passord":"stfyey23",
+          "highScore":8434
+        }
+      },
+      "meldinger":{
+        "001":{
+          "text":"Hei,Jarle!",
+          "brukernavn":"thorcc"
+        },
+        "002":{
+          "text":"Hallo Thor",
+          "brukernavn":"hayri6247"
+        },
+        "003":{
+          "text":"Hallosen,Stehpen",
+          "brukernavn":"stfyey23"
+        }
+      }
+    }
+  },
+  "7":{
+    "svar":""
+  }
+}

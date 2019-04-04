@@ -1,0 +1,28 @@
+{
+  "FolkeOpplysning":{
+    "1":{
+      "NickName":"Karro",
+      "Interrese":{},
+        "Trening":"Tennis, Fridrett",
+        "Boker":["Hunger Games,Lord of the Rings","The Great Gatsby"]
+      },
+      "2":{
+        "NickName":"Adel",
+        "Interrese":{},
+          "Trening":"Loping, Styrke",
+          "Boker":["Divergent,Danvincii","Life of Brian"]
+        },
+      "3":{
+        "NickName":"Isabel",
+        "Interrese":{},
+          "Trening":"Dansing,Jazz",
+          "Boker":["Twilight","One day"]
+        },
+      "4":{
+        "NickName":"Shawan",
+        "Interrese":{},
+          "Trening":"Soving",
+          "Boker":["Mens du sov"]
+       }
+      }
+    }

@@ -1,0 +1,197 @@
+{
+  "flight":{
+    "01":{
+      "From":"Oslo",
+      "To":"Italy",
+      "Depature":12.30,
+      "Arrival":13.45,
+      "Company":"United",
+      "Price":"234 NOK"
+    },
+   "02":{
+     "From":"Oslo",
+     "To":"Italy",
+     "Depature":13.30,
+     "Arrival":15.45,
+     "Company":"Star Airlines",
+     "Price":"367 NOK"
+   },
+   "03":{
+     "From":"Oslo",
+     "To":"Italy",
+     "Depature":15.50,
+     "Arrival":16.305,
+     "Company":"SAS",
+     "Price":"400 NOK"
+   },
+   "04":{
+     "From":"Oslo",
+     "To":"Spain",
+     "Depature":11.30,
+     "Arrival":12.13,
+     "Company":"United",
+     "Price":"156 NOK"
+   },
+  "05":{
+    "From":"Oslo",
+    "To":"Spain",
+    "Depature":13.30,
+    "Arrival":14.45,
+    "Company":"Star Airlines",
+    "Price":"214 NOK"
+  },
+  "06":{
+    "From":"Oslo",
+    "To":"Spain",
+    "Depature":14.50,
+    "Arrival":15.55,
+    "Company":"SAS",
+    "Price":"365 NOK"
+  },
+  "08":{
+    "From":"Oslo",
+    "To":"Greece",
+    "Depature":11.30,
+    "Arrival":13.45,
+    "Company":"United",
+    "Price":"345 NOK"
+  },
+ "09":{
+   "From":"Oslo",
+   "To":"Greece",
+   "Depature":13.30,
+   "Arrival":15.45,
+   "Company":"Star Airlines",
+   "Price":"453 NOK"
+ },
+ "10":{
+   "From":"Oslo",
+   "To":"Greece",
+   "Depature":15.50,
+   "Arrival":16.35,
+   "Company":"SAS",
+   "Price":"490 NOK"
+ },
+ "11":{
+   "From":"Oslo",
+   "To":"Russia",
+   "Depature":17.30,
+   "Arrival":21.45,
+   "Company":"United",
+   "Price":"567 NOK"
+ },
+"12":{
+  "From":"Oslo",
+  "To":"Russia",
+  "Depature":18.30,
+  "Arrival":22.50,
+  "Company":"Star Airlines",
+  "Price":"590 NOK"
+},
+"13":{
+  "From":"Oslo",
+  "To":"Russia",
+  "Depature":19.50,
+  "Arrival":23.30,
+  "Company":"SAS",
+  "Price":"550 NOK"
+},
+"14":{
+  "From":"Oslo",
+  "To":"Japan",
+  "Depature":0.10,
+  "Arrival":13.05,
+  "Company":"United",
+  "Price":"1450 NOK"
+},
+"15":{
+ "From":"Oslo",
+ "To":"Japan",
+ "Depature":15.06,
+ "Arrival":23.35,
+ "Company":"Star Airlines",
+ "Price":"1723 NOK"
+},
+"16":{
+ "From":"Oslo",
+ "To":"Japan",
+ "Depature":15.50,
+ "Arrival":16.305,
+ "Company":"SAS",
+ "Price":"2300 NOK"
+},
+"17":{
+  "From":"Oslo",
+  "To":"India",
+  "Depature":3.30,
+  "Arrival":13.45,
+  "Company":"United",
+  "Price":"3500 NOK"
+},
+"18":{
+ "From":"Oslo",
+ "To":"India",
+ "Depature":16.30,
+ "Arrival":3.45,
+ "Company":"Star Airlines",
+ "Price":"4500 NOK"
+},
+"19":{
+ "From":"Oslo",
+ "To":"Australia",
+ "Depature":15.50,
+ "Arrival":3.30,
+ "Company":"SAS",
+ "Price":"1500 NOK"
+},
+"20":{
+  "From":"Oslo",
+  "To":"Australia",
+  "Depature":8.30,
+  "Arrival":15.45,
+  "Company":"United",
+  "Price":"1234 NOK"
+},
+"21":{
+ "From":"Oslo",
+ "To":"United States of America",
+ "Depature":1.30,
+ "Arrival":15.45,
+ "Company":"Star Airlines",
+ "Price":"900 NOK"
+},
+"22":{
+ "From":"Oslo",
+ "To":"United States of America",
+ "Depature":17.10,
+ "Arrival":9.30,
+ "Company":"SAS",
+ "Price":"1300 NOK"
+},
+"23":{
+  "From":"Oslo",
+  "To":"Brazil",
+  "Depature":4.55,
+  "Arrival":15.35,
+  "Company":"United",
+  "Price":"1778 NOK"
+},
+"24":{
+ "From":"Oslo",
+ "To":"Brazil",
+ "Depature":18.30,
+ "Arrival":11.00,
+ "Company":"Star Airlines",
+ "Price":"2543 NOK"
+},
+"25":{
+ "From":"Oslo",
+ "To":"Egypt",
+ "Depature":14.10,
+ "Arrival":7.30,
+ "Company":"SAS",
+ "Price":"8900 NOK"
+}
+
+ }
+}

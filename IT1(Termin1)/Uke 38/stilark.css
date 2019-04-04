@@ -1,0 +1,64 @@
+header, main {
+  width: 700px
+  margin: 12 %;
+}
+
+
+header{
+  font-size: 30px;
+  font-family: monospace;
+  color: grey;
+}
+
+h1 b{
+  font-size: 25 px;
+  background-color:grey;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: sans-serif;
+}
+
+  h2{
+    font-size: 20px
+    font-family:inherit;
+  }
+
+body{
+  background-color:black;
+  color:white;
+  font-size: 20px;
+  margin: 5%;
+}
+p{
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+}
+
+}
+ul{
+  list-style-type: none;
+  margin-left: 0px;
+
+}
+li{
+  display: inline;
+}
+a{
+  text-decoration: none;
+  background: yellow;
+  padding: 16px;
+  border-radius: 7px;
+margin: 10px;
+margin-top: 10px;
+margin-bottom: 123px;
+margin-auto
+  color: white;
+}
+
+img{
+  width: 70%;
+  display: block;
+  margin: 15px auto auto;
+}

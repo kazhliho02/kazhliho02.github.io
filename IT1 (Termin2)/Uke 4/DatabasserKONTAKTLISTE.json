@@ -1,0 +1,28 @@
+{
+  "kontakter":{
+    "1":{
+      "firstName":"Karoline Holm",
+      "lastName":"Coward",
+      "telephone":83034209,
+      "adress":"badebakken 8,0722 Oslo",
+      "bokerPoNattbordet":["Of mice and men" , "Kjempens fall" , "Sapines"],
+      "LikerInternett":true,
+      "utdanning":{
+        "vidregoende":"Kristian Katedrahl",
+        "hoyereutdanning":"Universitet,NTNU,Norges Idrettsh;oyskoler"
+      }
+    },
+    "2":{
+      "firstName":"Svein ",
+      "lastName": "Ivar Holm",
+      "telephone":7287362,
+      "adress":"badebakken 8,0722 Oslo",
+    },
+    "3":{
+      "firstName":"Karl",
+      "lastName":"Holm",
+      "telephone":1828913,
+      "adress":"badebakken 8,0722 Oslo"
+      }
+    }
+  }
