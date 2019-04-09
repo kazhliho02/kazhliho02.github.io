@@ -21,7 +21,7 @@
   <body>
     <header>
       <nav>
-        <a id="logo" href="index2.html">FlyForYou</a>
+        <a id="logo" href="#">FlyForYou</a>
         <nav>
           <ul>
             <li><a href="index2.html" >Home</a></li>
@@ -42,69 +42,39 @@
       <section id="secAlleFbilett">
         </section>
     <main>
-      <footer>
-        <div class="row">
-          <div class="column">
-            <ul>
-              <h3>Media&Partners</h3>
-              <li>Advertise with us</li>
-              <li>Global citizenships</li>
-              <li>Socical Media</li>
-            </ul>
-          </div>
-          <div class="column">
-            <ul>
-            <h3>Collebration </h3>
-            <li>United</li>
-            <li>Delta</li>
-            <li>StairAirlines</li>
-            <li>Euthopia</li>
-            <li>Turkish Airlines</li>
-          </ul>
-          </div>
-          <div class="column">
-            <ul>
-              <h3>Corporate information</h3>
-              <li>Shared Purpose&values</li>
-              <li>investors relations</li>
-              <li>Leadership teams</li>
-            </ul>
-          </div>
-        </div>
-      </footer>
 
     <script type="text/javascript">
     //refrer til databsen//
     const secAlleFbilett=document.querySelector("#secAlleFbilett")
 
     const db=firebase.database();
-    const flight=db.ref("fly/flight");
+    const flight=db.ref("fly/flights");
 
     visAlleFbilett();
 
     function visAlleFbilett(){
-      secAlleFbilett.innerHTML = "";
+      visAlleFbilett.innerHTML = "";
       flight.on("child_added",visFbilett);
     }
     function visFbilettAlfabetisk(){
-      secAlleFbilett.innerHTML = "";
+      visAlleFbilett.innerHTML = "";
       flight.orderByChild("To")
       .on("child_added", visFbilett);
     }
     function visFbilettBilligst(){
-      secAlleFbilett.innerHTML = "";
+      visAlleFbilett.innerHTML = "";
       flight.orderByChild("Price")
       .limitToLast(10)
       .on("child_added", visFbilett);
     }
     function visFbilettDyrest(){
-      secAlleFbilett.innerHTML = "";
+      visAlleFbilett.innerHTML = "";
       flight.orderByChild("Price")
       .limitToFirst(10)
       .on("child_added", visFbilett);
     }
     function visFbilett1500(){
-      secAlleFbilett.innerHTML = "";
+      visAlleFbilett.innerHTML = "";
       flight.orderByChild("Price")
       .startAt("0")
       .endAt("1500")
@@ -115,13 +85,13 @@
       let key=snapshot.key;
       let flight=snapshot.val();
       secAlleFbilett.innerHTML+=`
-      <section class="flight">
+      <section class="flight{">
       <tr>
-        <h3>${key}:${flight["To"]}</h3>
-        <p>Price: ${flight["Price"]}</p>
-        <p>Company: ${flight["Company"]}</p>
-        <p>Depature: ${flight["Depature"]}</p>
-        <p>Arrival: ${flight["Arrival"]}</p>
+        <td><h3>${key}:${flight["To"]}</h3></td>
+        <td><p>Price: ${flight["Price"]}</p></td>
+        <td><p>Company: ${flight["Company"]}</p></td>
+        <td><p>Depature: ${flight["Depature"]}</p></td>
+        <td><p>Arrival: ${flight["Arrival"]}</p></td>
      </tr>
      </section>
       `

@@ -4,18 +4,18 @@
     <meta charset="utf-8">
 
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD9cvCCkfmIIH8yZxvcNPGWrL9Bq_Ih7Ao",
-    authDomain: "flyforyou-5a651.firebaseapp.com",
-    databaseURL: "https://flyforyou-5a651.firebaseio.com",
-    projectId: "flyforyou-5a651",
-    storageBucket: "flyforyou-5a651.appspot.com",
-    messagingSenderId: "716627781087"
-  };
-  firebase.initializeApp(config);
-</script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD9cvCCkfmIIH8yZxvcNPGWrL9Bq_Ih7Ao",
+        authDomain: "flyforyou-5a651.firebaseapp.com",
+        databaseURL: "https://flyforyou-5a651.firebaseio.com",
+        projectId: "flyforyou-5a651",
+        storageBucket: "flyforyou-5a651.appspot.com",
+        messagingSenderId: "716627781087"
+      };
+      firebase.initializeApp(config);
+    </script>
     <title>Destinations</title>
     <link rel="stylesheet" href="Destination.css">
   </head>
@@ -25,114 +25,78 @@
         <a id="logo" href="index2.html">FlyForYou</a>
         <nav>
           <ul>
-            <li><a href="index2.html" >Home</a></li>
+            <li><a href="index2.html" id="current">Home</a></li>
             <li><a href="Book.html">Book</a></li>
-            <li><a href="Destination.html"id="current">Destinations</a></li>
+            <li><a href="Destination.html">Destinations</a></li>
             <li><a href="Flight.html">Flights</a></li>
           </ul>
         </nav>
       </nav>
     </header>
     <main>
-        <button  onclick="visLandEurope()" >EUROPE</button>
-        <button  onclick="visLandAsia()">ASIA</button>
-        <button  onclick="visLandAfrica()">AFRICA</button>
-        <button  onclick="visLandAmerica()">AMERICA</button>
-        <button  onclick="visLandOceania()">OCEANIA</button>
+        <button type="button" name="button" onclick="visLandEurope()">Europe</button>
+        <button type="button" name="button" onclick="visLandAsia()">Asia</button>
+        <button type="button" name="button" onclick="visLandAfrica()">Africa</button>
+        <button type="button" name="button" onclick="visLandAmerica()">America</button>
+        <button type="button" name="button" onclick="visLandOceania()">Oceanias</button>
         <section id="secDestination">
       </section>
     </main>
-
-    <footer>
-      <div class="row">
-        <div class="column">
-          <ul>
-            <h3>Media&Partners</h3>
-            <li>Advertise with us</li>
-            <li>Global citizenships</li>
-            <li>Socical Media</li>
-          </ul>
-        </div>
-        <div class="column">
-          <ul>
-          <h3>Collebration </h3>
-          <li>United</li>
-          <li>Delta</li>
-          <li>StairAirlines</li>
-          <li>Euthopia</li>
-          <li>Turkish Airlines</li>
-        </ul>
-        </div>
-        <div class="column">
-          <ul>
-            <h3>Corporate information</h3>
-            <li>Shared Purpose&values</li>
-            <li>investors relations</li>
-            <li>Leadership teams</li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-
     <script type="text/javascript">
     // Referanser til HTML-elementer
     const secAlleDestination = document.querySelector("#secDestination");
     // Referanser til firebase-databasen
     const db = firebase.database();
     const destination = db.ref("destination");
-
-    visAlleDestination(); // Kjører funksjonen visAlleDestination i det nettsiden starter, funksjonen er definert under
+    visAlleDestination(); // Kjører funksjonen visAllePokemon i det nettsiden starter, funksjonen er definert under
 
     function visAlleDestination(){
       secAlleDestination.innerHTML = ``; // Sletter innholdet i html-elementet secAlleDestination
-      destination.on("child_added",genererHTML); // Spørrefunksjon som henter alle destination fra databasen, og kjører funksjonen genererHTML på hver destination.
+      destination.on("child_added",genererHTML); // Spørrefunksjon som henter alle pokemon fra databasen, og kjører funksjonen genererHTML på hver destination.
     }
     function visLandEurope(){
       secAlleDestination.innerHTML = ``;
-      destination.orderByChild("Continent")
-      .equalTo("Europe")
-      .on("child_added",genererHTML);
+      destination.orderByChild("Europe").on("child_added",genererHTML);
     }
     function visLandAsia(){
       secAlleDestination.innerHTML = ``;
-      destination.orderByChild("Continent")
-      .equalTo("Asia")
-      .on("child_added",genererHTML);
+      destination.orderByChild("Asia").on("child_added",genererHTML);
     }
     function visLandAfrica(){
       secAlleDestination.innerHTML = ``;
-      destination.orderByChild("Continent")
-      .equalTo("Africa")
-      .on("child_added",genererHTML);
+      destination.orderByChild("Africa").on("child_added",genererHTML);
     }
     function visLandAmerica(){
       secAlleDestination.innerHTML = ``;
-      destination.orderByChild("Continent")
-      .equalTo("America")
-      .on("child_added",genererHTML);
+      destination.orderByChild("America").on("child_added",genererHTML);
     }
     function visLandOceania(){
       secAlleDestination.innerHTML = ``;
-      destination.orderByChild("Continent")
-      .equalTo("Oceania")
-      .on("child_added",genererHTML);
+      destination.orderByChild("Oceania").on("child_added",genererHTML);
     }
 
+
     function genererHTML(snapshot){
+      // Javascript-funksjon for å generere HTML for hver Pokemon
+      // Denne får dere på prøven
       let key = snapshot.key;
-      let destin = snapshot.val();
-      console.log(destin);
-      secAlleDestination.innerHTML += `
+      let poke = snapshot.val();
+      secAllePokemon.innerHTML += `
         <section class="destination">
-          <h3 style="text-align:center">${key}</h3>
-          <img src=${destin["Bilde"]}>
-          <p class="Verdensdel">Continet: ${destin["Continent"]}</p>
-          <p>Chapther:${destin["Chapther"]}</p>
-          <p>Currency: ${destin["Currency"]}</p>
+          <h3>${key}:${poke["Chapther"]}</h3>
+          <p>Europe: ${poke["Europe"]}</p>
+          <p>Africa: ${poke["Africa"]}</p>
+          <p>America: ${poke["America"]}</p>
+          <p>Asia: ${poke["Asia"]}</p>
+          <p>Oceania: ${poke["Oceania"]}</p>
         </section>
       `
     }
-
     </script>
+
+
+
+    <footer>
+    </footer>
   </body>
 </html>
