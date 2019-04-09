@@ -1,46 +1,45 @@
 {
-  "destination":{
     "Italy":{
       "Continent":"Europe",
       "Chapther":"Roma",
       "Currency":"Euro",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Italy.jpg"
     },
     "France":{
       "Continent":"Europe",
       "Chapther":"Paris",
       "Currency":"Euro",
-      "Bilde":""
+      "Bilde":"bilder/Destination/France.jpg"
     },
     "Spain":{
       "Continent":"Europe",
       "Chapther":"Barcelona",
       "Currency":"Euro",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Spain.jpg"
     },
     "Greece":{
       "Continent":"Europe",
       "Chapther":"Athens",
       "Currency":"Euro",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Greece.jpg"
     },
     "England":{
       "Continent":"Europe",
       "Chapther":"London",
       "Currency":"Pound",
-      "Bilde":""
+      "Bilde":"bilder/Destination/England.jpg"
     },
     "Iceland":{
       "Continent":"Europe",
       "Chapther":"Reykjavík",
       "Currency":"Euro",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Iceland.jpg"
     },
     "Germany":{
       "Continent":"Europe",
-      "Chapther":"Reykjavík",
+      "Chapther":"Berlin",
       "Currency":"Euro",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Germany.jpg"
     },
 
 
@@ -48,31 +47,32 @@
       "Continent":"Asia",
       "Chapther":"Moskva",
       "Currency":"Russian ruble",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Russia.jpg"
     },
     "China":{
       "Continent":"Asia",
       "Chapther":"Bejing",
       "Currency":"Yuan",
-      "Bilde":""
+      "Bilde":"bilder/Destination/China.jpg"
     },
     "Japan":{
       "Continent":"Asia",
       "Chapther":"Tokyo",
       "Currency":"Yen",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Japan.jpg"
     },
     "India":{
       "Continent":"Asia",
       "Chapther":"New Delhi",
       "Currency":"Indian rupee",
-      "Bilde":""
+      "Bilde":"bilder/Destination/India.jpg"
+
     },
     "Thailand":{
       "Continent":"Asia",
       "Chapther":"Bangkok",
       "Currency":"Baht",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Thailand.jpg"
     },
 
 
@@ -80,19 +80,19 @@
       "Continent":"Oceania",
       "Chapther":"Wellingtion",
       "Currency":"Dollar",
-      "Bilde":""
+      "Bilde":"bilder/Destination/New Zealand.jpg"
     },
     "Australia":{
       "Continent":"Oceania",
       "Chapther":"Canberra",
       "Currency":"Dollar",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Australia.jpg"
     },
     "Fiji":{
       "Continent":"Oceania",
       "Chapther":"Suva",
       "Currency":"Dollar",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Fiji.jpg"
     },
 
 
@@ -100,25 +100,25 @@
       "Continent":"America",
       "Chapther":"Washington.D.C",
       "Currency":"Dollar",
-      "Bilde":""
+      "Bilde":"bilder/Destination/New York.jpg"
     },
     "Canada":{
       "Continent":"America",
       "Chapther":"Toronto",
       "Currency":"Dollar",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Canada.jpg"
     },
     "Mexico":{
       "Continent":"America",
       "Chapther":"New Mexico",
       "Currency":"Dollar",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Mexico.jpg"
     },
     "Brazil":{
       "Continent":"America",
       "Chapther":"Braziliana",
       "Currency":"Dollar",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Brazil.jpg"
     },
 
 
@@ -126,19 +126,18 @@
       "Continent":"Africa",
       "Chapther":"Cape town",
       "Currency":"Rand",
-      "Bilde":""
+      "Bilde":"bilder/Destination/South Africa.jpg"
     },
     "Egypt":{
       "Continent":"Africa",
       "Chapther":"Cairo",
       "Currency":"Egypthan pound",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Egypt.jpg"
     },
     "Tanzania":{
       "Continent":"Africa",
       "Chapther":"Dodoma",
       "Currency":"Dollar",
-      "Bilde":""
+      "Bilde":"bilder/Destination/Tanzania.jpg"
     }
-  }
 }
