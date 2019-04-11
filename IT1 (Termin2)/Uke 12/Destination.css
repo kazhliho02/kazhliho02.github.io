@@ -3,7 +3,8 @@ html {
   background-color: #fafafa;
 }
 header {
-  position: fixed;
+  position: relative;
+  z-index: 1;
   top: 0;
   right: 0;
   left: 0;
@@ -17,7 +18,7 @@ header {
   padding: .4em;
   text-decoration: none;
   color: #333;
-  border-right: 1px solid #e3e3e8;
+  border-right: 1px solid #fafafa;
   transition: .5s all;
 }
 #logo:hover {
@@ -25,7 +26,9 @@ header {
   background-color: #333;
 }
 nav {
-  float: left;
+  ;
+  overflow: hidden;
+
 }
 nav ul {
   list-style-type: none;
@@ -40,19 +43,100 @@ nav ul li a {
   color: #333;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.6em;
-  padding-bottom: 1.3em;
+  font-size: 1.5em;/**/
   transition: .5s color;
 }
 nav ul li a:hover {
   border-bottom: 3px solid #333;
 }
+
 #current {
   color: #ff4629;
+  border-bottom: 3px solid #333;
 }
-/*Fornms*/
 
 
-main{
-  padding-top: 200px;
+
+/*Knapper / spørringer*/
+/* Gray */
+button {
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+
+  margin-top: 1.5%;
+  margin-bottom:1.5%;
+  color: bold #475068;
+  border: 2px solid #475068;
+  background-color:  #fafafa;
+  color: #475068;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-family: "Oswald";
+  cursor: pointer;
+}
+
+button:hover {
+  background: #475068;
+  color: white;
+}
+
+/*Bilder*/
+#secDestination{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.destination{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Gir skygge til boksen */
+}
+.destination img{
+  width: 100%;
+}
+  @media(max-width:900px){
+     #secDestination{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  @media(max-width:700px){
+    #secDestination{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media(max-width:500px){
+    #secDestination{
+      grid-template-columns: 1fr;
+    }
+  }
+
+.Verdensdel{
+  color: grey;
+ font-size: 22px;
+}
+p{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+footer{
+margin-top: 10px;
+border-bottom: 2px solid white;
+background-color: #475068;
+font-family: "Oswald";
+color: white;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
 }
