@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyACGbUjPMut-U-OPyifd5PFYXbbEhriQyg",
+        authDomain: "quick-chick.firebaseapp.com",
+        databaseURL: "https://quick-chick.firebaseio.com",
+        projectId: "quick-chick",
+        storageBucket: "quick-chick.appspot.com",
+        messagingSenderId: "240712212711"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+    <main>
+
+    </main>
+    <script type="text/javascript">
+      const main = document.querySelector("main");
+      let url_string = window.location.href;
+      let url = new URL(url_string);
+      let parent = url.searchParams.get("parent");
+      let key = url.searchParams.get("key");
+
+      console.log(key,parent);
+      const db = firebase.database();
+      const valgtProdukt = db.ref("produkt/"+parent+"/"+key);
+
+      valgtProdukt.on("value",genererHTML);
+
+      function genererHTML (snapshot){
+        let key = snapshot.key;
+        let prod = snapshot.val();
+        let parent = snapshot.ref.parent.key;
+        console.log(prod);
+        secAlleProudkt.innerHTML +=`
+         <section class = "produkt">
+           <img src='../${prod["bilde"]}' class = "col col-image">
+          </div>
+          <div class="col col-text col-left">
+           <div class="Aligner-item">
+            <h3>${prod["navn"]}</h3>
+            <p>Pris:${prod["pris"]}</p>
+            <p><div>InfoOmProdukt:</div><div><cite>&ldquo;${prod["infoPro"]}&ldquo;</cite></div></p>
+           </div>
+          </div>
+         </section>
+        `
+      }
+    </script>
+  </body>
+</html>

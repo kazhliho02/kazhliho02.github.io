@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyACGbUjPMut-U-OPyifd5PFYXbbEhriQyg",
+    authDomain: "quick-chick.firebaseapp.com",
+    databaseURL: "https://quick-chick.firebaseio.com",
+    projectId: "quick-chick",
+    storageBucket: "quick-chick.appspot.com",
+    messagingSenderId: "240712212711"
+  };
+  firebase.initializeApp(config);
+</script>
+<title>Meny</title>
+  </head>
+  <link rel="stylesheet" href="Meny.css">
+  <link rel="icon" href="QuickLogo.png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Passion+One|Roboto+Condensed" rel="stylesheet">
+  <body>
+    <header>
+      <a href="index.html"><img id="logo" src="QuickLogo.png" alt="Quick Chick"></a>
+      <a class="menyElement" href="">Meny</a>
+      <a class="menyElement" href="">Nyhet</a>
+      <a class="menyElement" href="">Restauranter</a>
+      <div class="fill"></div>
+      <a class="menyElement" href="">Om Oss</a>
+      <input class="inputSok" type="text" placeholder="Søk..." spellcheck="false">
+      <img src="../Bilder\BildeProdukt\bg-img.jpg" class="bg-img">
+    </header>
+
+    <h1>Meny</h1>
+    <button onclick="visProduktBurger()" id="Menybtn" >HAMBURGER</button>
+    <button onclick="visProduktSandwich()"id="Menybtn">SANDWICHER</button>
+    <button onclick="visProduktNugget()" id="Menybtn">NUGGETS</button>
+    <button onclick="visProduktKylling()"id="Menybtn">KYLLING</button>
+    <button onclick="visProduktDrikke()"id="Menybtn">DRIKKE</button>
+    <button onclick="visProduktEkstra()"id="Menybtn">EKSTRA</button>
+    <main>
+      <section id="secAlleProudkt">
+      </section>
+    </main>
+    <footer>
+      <script type="text/javascript">
+      //Referanser til HTML-elementer
+        const secAlleProudkt = document.querySelector("#secAlleProudkt");
+        //Referanser til firebase-databasen
+        const db = firebase.database();
+        const burger = db.ref("produkt/burger");
+        const sandwich = db.ref("produkt/sandwich");
+        const nugget = db.ref("produkt/nugget");
+        const kylling = db.ref("produkt/kylling");
+        const drikke = db.ref("produkt/drikke");
+        const ekstra = db.ref("produkt/ekstra");
+
+        visAlleProdukt();
+
+        function visAlleProdukt(){
+          secAlleProudkt.innerHTML = ``;
+          burger.on("child_added",genererHTML);
+          sandwich.on("child_added",genererHTML);
+          nugget.on("child_added",genererHTML);
+          kylling.on("child_added",genererHTML);
+          drikke.on("child_added",genererHTML);
+        }
+        function visProduktBurger(){
+          console.log("burger");
+          secAlleProudkt.innerHTML = ``;
+          burger.orderByChild("navn").on("child_added",genererHTML);
+        }
+        function visProduktSandwich(){
+          secAlleProudkt.innerHTML = ``;
+          sandwich.orderByChild("navn")
+          .on("child_added",genererHTML);
+        }
+        function visProduktNugget(){
+          secAlleProudkt.innerHTML = ``;
+          nugget.orderByChild("navn")
+          .on("child_added",genererHTML);
+        }
+        function visProduktKylling(){
+          secAlleProudkt.innerHTML = ``;
+          kylling.orderByChild("navn")
+          .on("child_added",genererHTML);
+        }
+        function visProduktDrikke(){
+          secAlleProudkt.innerHTML = ``;
+          drikke.orderByChild("navn")
+          .on("child_added",genererHTML);
+        }
+        function visProduktEkstra(){
+          secAlleProudkt.innerHTML = ``;
+          ekstra.orderByChild("navn")
+          .on("child_added",genererHTML);
+        }
+
+        function genererHTML (snapshot){
+          let key = snapshot.key;
+          let prod = snapshot.val();
+          let parent = snapshot.ref.parent.key;
+          console.log(prod);
+
+          secAlleProudkt.innerHTML +=`
+           <section class = "produkt">
+             <img src='../${prod["bilde"]}' class = "col col-image">
+            </div>
+            <div class="col col-text col-left">
+             <div class="Aligner-item">
+              <h3>${prod["navn"]}</h3><hr>
+              <p>Pris:${prod["pris"]}</p>
+              <a class="LesMerBtn" href="InformasjonProdukt.html?key=${key}&{parent}">LES MER</a>
+             </div>
+            </div>
+           </section>
+          `
+        }
+      </script>
+    </footer>
+  </body>
+</html>
