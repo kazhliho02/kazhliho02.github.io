@@ -1,0 +1,39 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  color: white;
+}
+
+.bgimg {
+  background-image: url("https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  font-family:times new roman;
+  font-size: 25px;
+}
+
+
+.middle {
+  font-size: 70px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+ background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+ color: white;
+ font-weight: bold;
+ border: 3px solid #f1f1f1;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ z-index: 2;
+ width: 50%;
+ padding: 3px;
+ text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
